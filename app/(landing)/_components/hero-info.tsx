@@ -93,7 +93,7 @@ export const HeroInfo = () => {
           {/* Funding Stats Cards */}
         </div>
       </div>
-      <div className="lg:absolute w-full lg:px-6 lg:-bottom-24">
+      <div className="absolute w-full lg:px-6 lg:-bottom-24">
         <motion.div
           className="lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 "
           initial={{ opacity: 0, y: 20 }}
