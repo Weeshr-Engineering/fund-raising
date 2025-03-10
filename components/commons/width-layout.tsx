@@ -7,8 +7,8 @@ interface LayoutProps {
 }
 
 const WidthLayout: React.FC<LayoutProps> = ({ children, narrow = false }) => {
-  const defaultClass = narrow ? "w-[96%]  " : "w-[92.50%] ";
-  const extraLargeClass = narrow ? "2xl:w-[75%]" : "2xl:w-[80%]";
+  const defaultClass = narrow ? "w-[96%]  " : "w-[95%] ";
+  const extraLargeClass = narrow ? "2xl:w-full" : "2xl:w-full";
 
   return (
     <div

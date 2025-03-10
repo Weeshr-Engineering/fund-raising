@@ -2,8 +2,8 @@
 
 export const HeroSection = () => {
   return (
-    <div className="mx-auto  px-4 sm:px-6 lg:px-8 pb-0 text-center lg:pt-48 pt-14 space-y-9 lg:space-y-10">
-      <h1 className="mx-auto max-w-xl  text-5xl tracking-normal text-white sm:text-5xl font-semibold mb-5 leading-16">
+    <div className="mx-auto  px-4 sm:px-6 lg:px-8 pb-8 text-center lg:pt-48 p-14 space-y-9 lg:space-y-10">
+      <h1 className="mx-auto max-w-4xl  text-5xl tracking-normal text-white sm:text-5xl font-semibold mb-5 leading-16">
         <span className="inline-block">
           Own an Equity Share in
           <span className="relative whitespace-nowrap text-blue-600 pr-1">

@@ -66,7 +66,8 @@ body {
 
 :root {
   --background: #020721;
-  --foreground: #262a40;
+  --foreground: #212640;
+
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -75,8 +76,8 @@ body {
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: #9ba3d2;
+  --muted: #afb7e6;
+  --muted-foreground: #5f6689;
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
