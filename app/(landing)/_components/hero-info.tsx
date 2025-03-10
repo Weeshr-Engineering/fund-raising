@@ -4,10 +4,12 @@
 import * as motion from "motion/react-client";
 import { DollarSign, Percent, Flag, PieChart, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import { Icon } from "@iconify/react";
+
 export const HeroInfo = () => {
   return (
     <div className=" text-white relative">
-      <div className="px-4 md:px-6 py-10  lg:bg-foreground/50 rounded-2xl container mx-auto lg:pb-28 lg:mb-44">
+      <div className=" py-10  lg:bg-foreground/50 rounded-2xl mx-auto lg:pb-28 lg:mb-44 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left Column - Text and Play Button */}
@@ -91,7 +93,7 @@ export const HeroInfo = () => {
           {/* Funding Stats Cards */}
         </div>
       </div>
-      <div className="lg:absolute w-full px-6 lg:-bottom-24">
+      <div className="lg:absolute w-full lg:px-6 lg:-bottom-24">
         <motion.div
           className="lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 "
           initial={{ opacity: 0, y: 20 }}
@@ -99,8 +101,13 @@ export const HeroInfo = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="glass rounded-xl p-6 bg-[#DCDEFF] flex justify-between flex-col h-52 md:h-full ">
-            <div className="w-10 h-10 rounded-full bg-blue-400/20 flex items-center justify-center mb-4">
-              <Flag className="h-5 w-5 text-blue-400" />
+            <div className="w-10 h-10 rounded-full  flex items-center justify-center mb-4">
+              <Icon
+                icon="solar:bolt-circle-bold"
+                height={50}
+                width={50}
+                className="text-background border-none"
+              />
             </div>
             <div className="space-y-0">
               <p className="text-slate-400 text-sm">Round</p>
@@ -109,8 +116,13 @@ export const HeroInfo = () => {
           </div>
 
           <div className="glass rounded-xl p-6 py-4 bg-[#C6EDF6] flex justify-between flex-col">
-            <div className="w-10 h-10 rounded-full bg-teal-400/20 flex items-center justify-center mb-4">
-              <DollarSign className="h-5 w-5 text-teal-400" />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
+              <Icon
+                icon="solar:star-circle-bold"
+                height={50}
+                width={50}
+                className="text-background border-none"
+              />
             </div>
             <div className="space-y-0">
               <p className="text-muted-foreground text-sm">Valuation</p>
@@ -119,8 +131,13 @@ export const HeroInfo = () => {
           </div>
 
           <div className="glass rounded-xl p-6 py-4 bg-[#E9F4D1] flex justify-between flex-col h-52 md:h-full">
-            <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center mb-4">
-              <Percent className="h-5 w-5 text-yellow-400" />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
+              <Icon
+                icon="solar:bookmark-circle-bold"
+                height={50}
+                width={50}
+                className="text-background border-none"
+              />
             </div>
             <div className="space-y-0">
               <p className="text-muted-foreground text-sm">Equity on Sale</p>
@@ -129,8 +146,13 @@ export const HeroInfo = () => {
           </div>
 
           <div className="glass rounded-xl p-6 py-4 bg-[#F4D5F6] flex justify-between flex-col">
-            <div className="w-10 h-10 rounded-full bg-pink-400/20 flex items-center justify-center mb-4">
-              <TrendingUp className="h-5 w-5 text-pink-400" />
+            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
+              <Icon
+                icon="solar:circle-bottom-up-bold"
+                height={50}
+                width={50}
+                className="text-background border-none"
+              />
             </div>
             <div className="space-y-0">
               <p className="text-muted-foreground">Raising</p>

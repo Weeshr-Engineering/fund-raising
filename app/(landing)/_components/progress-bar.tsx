@@ -1,25 +1,41 @@
 import * as motion from "motion/react-client";
 
-export const ProgressBar = ({ amountRaised = "$0.00", percentage = 0 }) => {
+export const ProgressBar = ({ amountRaised = "$300", percentage = 2 }) => {
   return (
     <motion.div
       className="mt-12 space-y-4"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.5 }}
+      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
     >
-      <div className="flex justify-between items-center">
-        <h3 className="text-xl text-slate-400">Amount Raised</h3>
-        <div className="text-4xl font-bold">{amountRaised}</div>
+      <div className="flex justify-between md:items-center flex-col md:flex-row">
+        <h3 className="text-xl text-muted md:pl-4">Amount Raised</h3>
+        <motion.div
+          className="text-4xl font-bold text-primary"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+        >
+          {amountRaised}
+        </motion.div>
       </div>
-      <div className="h-4 w-full bg-slate-800 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
-          style={{ width: `${percentage}%` }}
-        ></div>
-      </div>
-      <div className="flex justify-end">
-        <span className="text-slate-300">{percentage}%</span>
+      <div className="flex justify-center items-center gap-4">
+        <div className="h-4 w-full bg-slate-800 rounded-full overflow-hidden p-0.5">
+          <motion.div
+            className="h-full bg-[#6A70FF] rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${percentage}%` }}
+            transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+          ></motion.div>
+        </div>
+        <motion.div
+          className="flex justify-end"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
+        >
+          <span className="text-slate-300">{percentage}%</span>
+        </motion.div>
       </div>
     </motion.div>
   );
