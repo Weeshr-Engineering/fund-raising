@@ -15,8 +15,9 @@ export default function HeroContainer() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <WidthLayout>
           <HeroSection />
-          <div className="backdrop-blur-xl bg-foreground/50 lg:bg-transparent rounded-2xl ">
+          <div className="backdrop-blur-xl bg-foreground/50 lg:bg-transparent rounded-2xl px-4 md:px-6">
             <HeroInfo />
+
             <ProgressBar />
           </div>
         </WidthLayout>

@@ -101,7 +101,7 @@ export const FloatingNav = ({
                   "relative items-center flex space-x-1",
                   pathname === navItem.link
                     ? "text-black bg-white"
-                    : "text-white hover:text-black"
+                    : "text-white hover:text-muted-foreground"
                 )}
               >
                 <span className="block sm:hidden">{navItem.icon}</span>
