@@ -3,6 +3,8 @@ import { HeroSection } from "./hero-section";
 import { HeroInfo } from "./hero-info";
 import { ProgressBar } from "./progress-bar";
 import EquityCalculator from "./equity-calculator";
+import ProductJourney from "./product-journey";
+import { InvestmentSection } from "./investment-section";
 
 export default function HeroContainer() {
   return (
@@ -25,6 +27,10 @@ export default function HeroContainer() {
         <ProgressBar />
       </WidthLayout>
       <EquityCalculator />
+      <ProductJourney />
+      <WidthLayout>
+        <InvestmentSection />
+      </WidthLayout>
     </div>
   );
 }
