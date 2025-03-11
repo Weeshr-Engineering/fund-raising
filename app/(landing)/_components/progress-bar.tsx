@@ -1,17 +1,19 @@
 import * as motion from "motion/react-client";
 
-export const ProgressBar = ({ amountRaised = "$300", percentage = 2 }) => {
+export const ProgressBar = ({ amountRaised = "$10,800", percentage = 7 }) => {
   return (
     <motion.div
-      className="mt-12 space-y-4"
+      className="  space-y-4  mt-[500px] md:mt-[400px] px-4 lg:px-14 lg:mt-0"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
     >
       <div className="flex justify-between md:items-center flex-col md:flex-row">
-        <h3 className="text-xl text-muted md:pl-4">Amount Raised</h3>
+        <h3 className="text-3xl lg:text-4xl text-muted font-medium md:pl-4">
+          Amount Raised
+        </h3>
         <motion.div
-          className="text-4xl font-bold text-primary"
+          className="text-4xl lg:text-5xl  font-bold text-primary"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
