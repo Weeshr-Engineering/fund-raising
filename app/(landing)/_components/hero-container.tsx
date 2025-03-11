@@ -2,6 +2,8 @@ import WidthLayout from "@/components/commons/width-layout";
 import { HeroSection } from "./hero-section";
 import { HeroInfo } from "./hero-info";
 import { ProgressBar } from "./progress-bar";
+import { HowItWorks } from "./how-it-works";
+import Companies from "./marqee";
 
 export default function HeroContainer() {
   return (
@@ -20,6 +22,8 @@ export default function HeroContainer() {
 
             <ProgressBar />
           </div>
+          <Companies />
+          <HowItWorks />
         </WidthLayout>
       </main>{" "}
     </div>
