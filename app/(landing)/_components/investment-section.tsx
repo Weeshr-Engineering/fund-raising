@@ -42,12 +42,12 @@ export const InvestmentSection = () => {
             </h2>
             <p className="text-lg text-gray-300 max-w-6xl text-justify">
               We are raising a $150,000 at 10% equity from friends, family,
-              angels and networks. This round helps Weeshr to establish its
-              market through infrastructure to drive higher traction required
-              for seed round. The equity bought by individuals will be bought
-              back at a 2× value after completing our next Seed round. The
-              equity buy back is fixed for all equity holders from the pre-seed
-              round.
+              angel investors and networks. This pre-seed round will enable Weeshr to establish its
+              market by building the necessary infrastructure to drive higher traction in preparation for our seed rounded.
+              <br />
+              To ensure legal structure and investor protection, we are utilizing a Special Purpose Vehicle (SPV)
+              to facilitate and formalize the investment agreement. Investors equity will be bought back at 2x value upon completion of our next seed round.
+              The equity buyback is fixed for all pre-seed equity holders, providing a structure and trasnparent exit strategy.
             </p>
 
             <div className="flex justify-end">

@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="relative mt-[400px] md:mt-16">
+    <div className="relative mt-[400px] md:mt-16 mb-16">
       <footer className="px-4 pt-4 pb-6 lg:px-9 bg-[#011B2F] rounded-xl">
         <Image
           src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 rel="noreferrer"
               >
                 <Image
-                  src="https://res.cloudinary.com/dufimctfc/image/upload/v1723963374/Google_Play_zlkalx.svg"
+                  src="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28991_zbsyrl.png"
                   alt="Playstore Button"
                   width={110}
                   height={80}
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
             </a>
             <a
               className="w-full md:w-auto"
-              href="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28991_zbsyrl.png"
+              href="https://play.poogle.com/store/apps/details?id=com.app.weeshr&pcampaingid=web_share"
               target="_blank"
               rel="noreferrer"
             >
@@ -159,3 +159,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+// https://res.cloudinary.com/drykej1am/image/upload/v1741783910/weeshr-funding/iPhone_14_Pro_Mockup_1_e7jmcm.png

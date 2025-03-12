@@ -20,7 +20,7 @@ export const ReasonComponent = () => {
             BIGGEST
             <Image
               className="absolute -bottom-20 -left-32 h-60 w-60 z-30 hidden md:inline-block" 
-              src='https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Navigation_rh5uok.png' alt='' width={100} height={100} />
+              src='https://res.cloudinary.com/drykej1am/image/upload/v1741783899/weeshr-funding/Navigation_rksdgk.svg' alt='' width={100} height={100} />
           </div>
         </motion.div>
 
@@ -50,46 +50,46 @@ export const ReasonComponent = () => {
         </div>
         <div className="w-full text-background">
           <motion.div
-            className="lg:mt-12 grid grid-cols-2 gap-4 "
+            className="lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-4 "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#DCDEFF] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full ">
-              <p className="rounded-full flex items-center text-4xl font-bold">
+              <p className="rounded-full flex items-center w-full lg:w-auto lg:items-center text-4xl font-bold">
                 1.5B
               </p>
-              <div className="space-y-0 text-right">
+              <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">Underserved Africans</p>
                 <h3 className="text-base font-bold">seeking our solution</h3>
               </div>
             </div>
 
-            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#C6EDF6] flex flex-col lg:flex-row lg:items-start justify-between items-center">
-              <p className="w-10 h-10 rounded-full flex items-center text-4xl font-bold">
+            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#C6EDF6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
+              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-bold">
                 $200B
               </p>
-              <div className="space-y-0 text-right">
+              <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">Market valuation</p>
                 <h3 className="text-base font-bold text-background">and growing</h3>
               </div>
             </div>
 
             <div className=" rounded-xl py-10 pl-12 pr-4 bg-[#E9F4D1] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
-              <p className="rounded-full flex items-center text-4xl font-bold text-nowrap">
+              <p className="rounded-full flex w-full lg:w-auto  items-center text-4xl font-bold text-nowrap">
                 50M+
               </p>
-              <div className="space-y-0 text-right">
+              <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">50M processed</p>
                 <h3 className="text-base font-bold text-background">organically in 4 months</h3>
               </div>
             </div>
 
-            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#F4D5F6] flex flex-col lg:flex-row lg:items-start justify-between items-center">
-              <p className="w-10 h-10 rounded-full flex items-center text-4xl font-bold text-nowrap">
+            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#F4D5F6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
+              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-bold text-nowrap">
                 10K+ Users
               </p>
-              <div className="space-y-0 text-right">
+              <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">Organically with zero</p>
                 <h3 className="text-base font-bold text-background">cost of aquisition</h3>
               </div>

@@ -9,6 +9,7 @@ import ProductJourney from "./product-journey";
 import { InvestmentSection } from "./investment-section";
 import { ReasonComponent } from "./reason-section";
 import PhoneUI from "./phoneui-card";
+import { TeamComponent } from "./team-section";
 
 export default function HeroContainer() {
   return (
@@ -37,6 +38,7 @@ export default function HeroContainer() {
       </WidthLayout>
       <PhoneUI />
       <ReasonComponent />
+      <TeamComponent />
       <WidthLayout>
         <Companies />
         <HowItWorks />
