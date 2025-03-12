@@ -43,11 +43,11 @@ const Footer: React.FC = () => {
     <div className="relative mt-[400px] md:mt-16">
       <footer className="px-4 pt-4 pb-6 lg:px-9 bg-[#011B2F] rounded-xl">
         <Image
-          src="https://res.cloudinary.com/drykej1am/image/upload/v1741637765/weeshr-funding/iPhone_14_Pro_Mockup_rfxtia.png"
+          src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"
           alt="logo"
           width={90}
           height={80}
-          className="w-full md:hidden absolute -top-[360px] left-1/2 transform -translate-x-1/2 px-4 -z-10"
+          className="w-full md:hidden absolute -top-[330px] left-1/2 transform -translate-x-1/2 px-4 -z-10"
         />
         <div className="flex flex-col items-center justify-between p-4 py-6 md:flex-row md:space-x-4 lg:space-x-6">
           <div className="flex flex-col items-start">
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <div className="mt-4 md:mt-6 lg:max-w-md md:text-left">
-              <p className="text-base text-white md:text-sm lg:text-sm">
+              <p className="text-base text-white md:text-sm lg:text-sm md:w-1/2">
                 Weeshr helps you collect your gifts with the click of one button
                 from your friends, fans, and family!
               </p>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-center mt-6 md:items-end md:mt-0">
-            <div className="flex items-center gap-2 px-2 mb-4 border md:hidden">
+            <div className="flex items-center gap-2 px-2 mb-4 md:hidden">
               <a
                 href="https://apps.apple.com/ng/app/weeshr/id6602884408"
                 target="_blank"
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
                 className="w-full md:w-auto"
               >
                 <Image
-                  src="https://res.cloudinary.com/dufimctfc/image/upload/v1723963363/App_Store_quvm85.svg"
+                  src="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28990_ke72lc.png"
                   alt="Apple store"
                   width={110}
                   height={80}
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 className="w-full md:w-auto"
-                href="https://play.google.com/store/apps/details?id=com.app.weeshr&pcampaignid=web_share"
+                href="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28991_zbsyrl.png"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -97,17 +97,17 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <Image
-              src="https://res.cloudinary.com/drykej1am/image/upload/v1741637765/weeshr-funding/iPhone_14_Pro_Mockup_rfxtia.png"
+              src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"
               alt="logo"
               width={90}
               height={80}
-              className="px-4 md:block hidden absolute bottom-0 right-9 h-[440px] w-[440px]"
+              className="px-4 md:block hidden absolute bottom-0 right-9 lg:h-[440px] w-80 h-80 lg:w-[440px] z-50"
             />
           </div>
         </div>
 
         <div className="flex flex-col items-start px-4 md:justify-between md:pb-10">
-          <div className="md:flex items-center gap-2 px-2 border hidden">
+          <div className="md:flex items-center gap-2 px-2 hidden">
             <a
               href="https://apps.apple.com/ng/app/weeshr/id6602884408"
               target="_blank"
@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
               className="w-full md:w-auto"
             >
               <Image
-                src="https://res.cloudinary.com/dufimctfc/image/upload/v1723963363/App_Store_quvm85.svg"
+                src="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28990_ke72lc.png"
                 alt="Apple store"
                 width={100}
                 height={60}
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
             </a>
             <a
               className="w-full md:w-auto"
-              href="https://play.google.com/store/apps/details?id=com.app.weeshr&pcampaignid=web_share"
+              href="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28991_zbsyrl.png"
               target="_blank"
               rel="noreferrer"
             >

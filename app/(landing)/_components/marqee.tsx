@@ -8,7 +8,7 @@ const Companies = () => {
   // const data
   return (
     <div className='w-full mt-12 min-h-fit'>
-      <div className="relative pt-8 md:pt-0 flex justify-start items-start w-full md:w-auto">
+      <div className="relative pt-8 lg:px-12 md:pt-0 flex justify-start items-start w-full md:w-auto">
         <h2 className="text-white pt-3 md:pb-10 pl-4 md:pl-0 font-semibold  text-left w-full flex justify-start items-start text-3xl md:text-5xl">
           Businesses they`ve
           <br />
@@ -16,7 +16,7 @@ const Companies = () => {
         </h2>
       </div>
       <Infinitystrip />
-      <div className='mt-32 flex flex-col gap-4 md:mt-12 md:flex-row items-center justify-between w-full px-4'>
+      <div className='mt-32 flex flex-col gap-4 md:mt-12 md:flex-row items-center justify-between w-full px-4 lg:px-12'>
         <div className='bg-[#D9D9D933] flex flex-col items-center justify-center p-2 rounded-3xl w-full md:w-[400px]'>
           <Image src='https://res.cloudinary.com/drykej1am/image/upload/v1741643919/weeshr-funding/radar-line_q0pqzh.png' alt='' width={30} height={30} className='my-4' />
           <button className='flex items-center justify-center rounded-xl py-3 w-full text-white bg-[#5CAF69]'>Invest Now</button>

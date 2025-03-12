@@ -7,6 +7,8 @@ import Companies from "./marqee";
 import EquityCalculator from "./equity-calculator";
 import ProductJourney from "./product-journey";
 import { InvestmentSection } from "./investment-section";
+import { ReasonComponent } from "./reason-section";
+import PhoneUI from "./phoneui-card";
 
 export default function HeroContainer() {
   return (
@@ -23,8 +25,6 @@ export default function HeroContainer() {
           <div className="backdrop-blur-xl bg-foreground/50 lg:bg-transparent lg:backdrop-blur-none rounded-2xl px-4 md:px-6 pb-10">
             <HeroInfo />
           </div>
-          <Companies />
-          <HowItWorks />
         </WidthLayout>
       </main>{" "}
       <WidthLayout narrow={true}>
@@ -34,6 +34,12 @@ export default function HeroContainer() {
       <ProductJourney />
       <WidthLayout>
         <InvestmentSection />
+      </WidthLayout>
+      <PhoneUI />
+      <ReasonComponent />
+      <WidthLayout>
+        <Companies />
+        <HowItWorks />
       </WidthLayout>
     </div>
   );
