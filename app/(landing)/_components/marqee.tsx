@@ -2,12 +2,16 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Marquee from "react-fast-marquee";
-// import { FiStar } from 'react-icons/fi'; // Example SVG icon from react-icons
+import * as motion from "motion/react-client";
 
 const Companies = () => {
   // const data
   return (
-    <div className='w-full mt-12 min-h-fit'>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className='w-full mt-12 min-h-fit'>
       <div className="relative pt-8 lg:px-12 md:pt-0 flex justify-start items-start w-full md:w-auto">
         <h2 className="text-white pt-3 md:pb-10 pl-4 md:pl-0 font-semibold  text-left w-full flex justify-start items-start text-3xl md:text-5xl">
           Businesses they`ve
@@ -30,14 +34,13 @@ const Companies = () => {
           <button className='flex items-center justify-center rounded-xl py-3 w-full text-white bg-[#3770AD]'>Join Next Public Pitch</button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 export default Companies;
 
 function Infinitystrip() {
-  const [position, setPosition] = useState(0);
   const icons = [
     'https://res.cloudinary.com/drykej1am/image/upload/v1741637763/weeshr-funding/Wealth_White_Logo_4x_1_eqmyid.png',
     'https://res.cloudinary.com/drykej1am/image/upload/v1741637762/weeshr-funding/piggyvest-seeklogo_1_rcavj0.png',
@@ -47,14 +50,6 @@ function Infinitystrip() {
     'https://res.cloudinary.com/drykej1am/image/upload/v1741637759/weeshr-funding/british-council-seeklogo_1_qo5jbq.png'
 
   ]
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPosition((prev) => (prev + 1) % (icons.length * 40)); // Adjust spacing as needed
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [icons.length]);
 
   return (
     <div className="relative overflow-hidden h-[7vh] w-full space-y-6">

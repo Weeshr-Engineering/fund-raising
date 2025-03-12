@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <Image
-              src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"
+              src="https://res.cloudinary.com/drykej1am/image/upload/v1741783910/weeshr-funding/iPhone_14_Pro_Mockup_1_e7jmcm.png"
               alt="logo"
               width={90}
               height={80}
