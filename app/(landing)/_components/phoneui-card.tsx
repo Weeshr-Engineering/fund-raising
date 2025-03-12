@@ -40,7 +40,7 @@ function Infinitystrip() {
           className="w-full flex items-center justify-between gap-8 lg:gap-16"
         >
           {icons.map((icon, index) => (
-            <div className='flex items-center justify-center gap-4 p-3 rounded-full bg-white shadow-md'>
+            <div key={index} className='flex items-center justify-center gap-4 p-3 rounded-full bg-white shadow-md'>
               <Image key={index} src={icon.img} alt='' width={20} height={20} />
               <p>{icon.name}</p>
             </div>
