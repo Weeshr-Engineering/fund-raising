@@ -37,10 +37,8 @@ const socialMediaLinks: SocialMediaLink[] = [
 ];
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <div className="relative mt-[400px] md:mt-16 mb-16">
+    <div className="relative mt-[400px] md:mt-16">
       <footer className="px-4 pt-4 pb-6 lg:px-9 bg-[#011B2F] rounded-xl">
         <Image
           src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"

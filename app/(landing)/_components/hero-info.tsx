@@ -95,13 +95,16 @@ export const HeroInfo = () => {
       </div>
       <div className="absolute w-full lg:px-6 lg:-bottom-24">
         <motion.div
-          className="lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 "
+          className="lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="glass rounded-xl p-6 bg-[#DCDEFF] flex justify-between flex-col h-52 md:h-full ">
-            <div className="w-10 h-10 rounded-full  flex items-center justify-center mb-4">
+          <motion.div
+            className="glass rounded-xl p-6 bg-[#DCDEFF] flex justify-between flex-col h-52 md:h-full"
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
+            <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
               <Icon
                 icon="solar:bolt-circle-bold"
                 height={50}
@@ -113,9 +116,12 @@ export const HeroInfo = () => {
               <p className="text-slate-400 text-sm">Round</p>
               <h3 className="text-2xl font-bold text-background">Pre-seed</h3>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass rounded-xl p-6 py-4 bg-[#C6EDF6] flex justify-between flex-col">
+          <motion.div
+            className="glass rounded-xl p-6 py-4 bg-[#C6EDF6] flex justify-between flex-col"
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
             <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
               <Icon
                 icon="solar:star-circle-bold"
@@ -128,9 +134,12 @@ export const HeroInfo = () => {
               <p className="text-muted-foreground text-sm">Valuation</p>
               <h3 className="text-2xl font-bold text-background">$1.5M</h3>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass rounded-xl p-6 py-4 bg-[#E9F4D1] flex justify-between flex-col h-52 md:h-full">
+          <motion.div
+            className="glass rounded-xl p-6 py-4 bg-[#E9F4D1] flex justify-between flex-col h-52 md:h-full"
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
             <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
               <Icon
                 icon="solar:bookmark-circle-bold"
@@ -143,9 +152,12 @@ export const HeroInfo = () => {
               <p className="text-muted-foreground text-sm">Equity on Sale</p>
               <h3 className="text-2xl font-bold text-background">10%</h3>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass rounded-xl p-6 py-4 bg-[#F4D5F6] flex justify-between flex-col">
+          <motion.div
+            className="glass rounded-xl p-6 py-4 bg-[#F4D5F6] flex justify-between flex-col"
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
             <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
               <Icon
                 icon="solar:circle-bottom-up-bold"
@@ -158,7 +170,7 @@ export const HeroInfo = () => {
               <p className="text-muted-foreground">Raising</p>
               <h3 className="text-2xl font-bold text-background">$150,000</h3>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>

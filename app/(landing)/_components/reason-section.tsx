@@ -41,7 +41,7 @@ export const ReasonComponent = () => {
             <h2 className="text-3xl md:text-4xl font-bold">
               Reasons for you to invest in Weeshr
             </h2>
-            <p className="text-lg text-gray-300 max-w-6xl text-justify">
+            <p className="text-md text-muted max-w-6xl text-justify">
               We are a fast growing with a ready market. The affrican virtual,
               social and online gifting market gifting is soaring. Gifting has
               been major part of the African culture in this digital age. People
@@ -83,46 +83,48 @@ export const ReasonComponent = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#DCDEFF] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full ">
-              <p className="rounded-full flex items-center w-full lg:w-auto lg:items-center text-4xl font-bold">
+              <p className="rounded-full flex items-center w-full lg:w-auto lg:items-center text-4xl font-semibold ">
                 1.5B
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
-                <p className="text-base font-bold">Underserved Africans</p>
-                <h3 className="text-base font-bold">seeking our solution</h3>
+                <p className="text-base font-normal">Underserved Africans</p>
+                <h3 className="text-base font-normal font">
+                  seeking our solution
+                </h3>
               </div>
             </div>
 
             <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#C6EDF6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
-              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-bold">
+              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-semibold">
                 $200B
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
-                <p className="text-base font-bold">Market valuation</p>
-                <h3 className="text-base font-bold text-background">
+                <p className="text-base font-normal">Market valuation</p>
+                <h3 className="text-base font-normal text-background">
                   and growing
                 </h3>
               </div>
             </div>
 
             <div className=" rounded-xl py-10 pl-12 pr-4 bg-[#E9F4D1] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
-              <p className="rounded-full flex w-full lg:w-auto  items-center text-4xl font-bold text-nowrap">
+              <p className="rounded-full flex w-full lg:w-auto  items-center text-4xl font-semibold text-nowrap">
                 50M+
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
-                <p className="text-base font-bold">50M processed</p>
-                <h3 className="text-base font-bold text-background">
+                <p className="text-base font-normal">50M processed</p>
+                <h3 className="text-base font-normal text-background">
                   organically in 4 months
                 </h3>
               </div>
             </div>
 
             <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#F4D5F6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
-              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-bold text-nowrap">
+              <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-semibold text-nowrap">
                 10K+ Users
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
-                <p className="text-base font-bold">Organically with zero</p>
-                <h3 className="text-base font-bold text-background">
+                <p className="text-base font-normal">Organically with zero</p>
+                <h3 className="text-base font-normal text-background  ">
                   cost of aquisition
                 </h3>
               </div>

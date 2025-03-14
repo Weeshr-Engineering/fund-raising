@@ -20,6 +20,36 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Weeshr Invest",
   description: "Own an Equity Share in Weeshr",
+  openGraph: {
+    title: "Weeshr",
+    description: "Make a Weesh!!",
+    url: "https://weeshr.com",
+    images: [
+      {
+        url: "https://res.cloudinary.com/drykej1am/image/upload/v1727903584/weeshr_website/ThumbnailWeeshr_1_3_oicmbz.png",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://res.cloudinary.com/drykej1am/image/upload/v1727903584/weeshr_website/ThumbnailWeeshr_1_3_oicmbz.png",
+        width: 1800,
+        height: 1600,
+        alt: "Weeshr alt",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    title: "Weeshr",
+    description: "Make a Weesh",
+    images: [
+      "https://res.cloudinary.com/drykej1am/image/upload/v1727903584/weeshr_website/ThumbnailWeeshr_1_3_oicmbz.png",
+    ],
+  },
+  other: {
+    // "google-site-verification": "Tpygm8ffQSGqRVivwFb15HdAmCgdfeGYNQ49vxTZKt4",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +66,9 @@ export default function RootLayout({
         </WidthLayout>
         {children}
         <WidthLayout>
-          <Footer />
+          <div className="pb-10">
+            <Footer />
+          </div>
         </WidthLayout>
       </body>
     </html>

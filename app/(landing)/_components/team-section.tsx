@@ -110,7 +110,7 @@ export const TeamComponent = () => {
             <h2 className="text-3xl md:text-4xl font-bold">
               Senior Leadership Team
             </h2>
-            <p className="text-lg text-gray-300 max-w-6xl text-justify">
+            <p className="text-md text-muted max-w-6xl text-justify">
               Meet The Mind Behind Weeshr
             </p>
           </motion.div>

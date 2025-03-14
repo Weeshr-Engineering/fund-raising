@@ -21,8 +21,8 @@ export const ParallaxScrollSecond = ({
 }) => {
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    container: gridRef, // remove this if your container is not fixed height
-    offset: ["start start", "end start"], // remove this if your container is not fixed height
+    container: gridRef,
+    offset: ["start start", "end start"],
   });
 
   const translateYFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -45,7 +45,7 @@ export const ParallaxScrollSecond = ({
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-24 px-10"
         ref={gridRef}
       >
         <div className="grid gap-10">
@@ -55,7 +55,7 @@ export const ParallaxScrollSecond = ({
                 y: translateYFirst,
                 x: translateXFirst,
                 rotateZ: rotateXFirst,
-              }} // Apply the translateY motion value here
+              }}
               key={"grid-1" + idx}
             >
               <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black group cursor-pointer">
@@ -65,11 +65,9 @@ export const ParallaxScrollSecond = ({
                     src={el.image}
                     width={300}
                     height={300}
-                    className="w-full h-full"
+                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div
-                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
-                  >
+                  <div className="absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent">
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -79,7 +77,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>{el.content}</p>
+                  <p className="text-md">{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -95,11 +93,9 @@ export const ParallaxScrollSecond = ({
                     src={el.image}
                     width={300}
                     height={300}
-                    className="w-full h-full"
+                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div
-                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
-                  >
+                  <div className="absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent">
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -109,7 +105,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>{el.content}</p>
+                  <p className="text-md">{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -132,11 +128,9 @@ export const ParallaxScrollSecond = ({
                     src={el.image}
                     width={300}
                     height={300}
-                    className="w-full h-full"
+                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div
-                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
-                  >
+                  <div className="absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent">
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -146,7 +140,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>{el.content}</p>
+                  <p className="text-md">{el.content}</p>
                 </div>
               </div>
             </motion.div>
