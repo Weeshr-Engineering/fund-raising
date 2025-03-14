@@ -75,9 +75,9 @@ export const ParallaxScrollSecond = ({
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-4 text-base">
+                <div className="w-full p-4 text-base pb-6">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p className="text-md">{el.content}</p>
+                  <p className="text-sm">{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -103,9 +103,9 @@ export const ParallaxScrollSecond = ({
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-4 text-base">
+                <div className="w-full p-4 text-base pb-6">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p className="text-md">{el.content}</p>
+                  <p className="text-sm">{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -138,9 +138,9 @@ export const ParallaxScrollSecond = ({
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-4 text-base">
+                <div className="w-full p-4 text-base pb-6">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p className="text-md">{el.content}</p>
+                  <p className="text-sm">{el.content}</p>
                 </div>
               </div>
             </motion.div>
