@@ -5,6 +5,7 @@ import * as motion from "motion/react-client";
 import { DollarSign, Percent, Flag, PieChart, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import YouTubeThumbnail from "@/components/commons/thumbnail";
 
 export const HeroInfo = () => {
   return (
@@ -32,7 +33,8 @@ export const HeroInfo = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-900"
               >
-                <Image
+                <YouTubeThumbnail url="https://youtu.be/pjPziqbHExY" />
+                {/*<Image
                   src="https://res.cloudinary.com/drykej1am/image/upload/v1695036799/cld-sample.jpg"
                   alt="Jupiter Promotional"
                   width={100}
@@ -52,7 +54,7 @@ export const HeroInfo = () => {
                       </svg>
                     </div>
                   </button>
-                </div>
+                </div>*/}
               </motion.div>
             </div>
 

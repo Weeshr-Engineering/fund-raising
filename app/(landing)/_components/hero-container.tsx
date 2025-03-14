@@ -10,6 +10,7 @@ import { InvestmentSection } from "./investment-section";
 import { ReasonComponent } from "./reason-section";
 import PhoneUI from "./phoneui-card";
 import { TeamComponent } from "./team-section";
+// import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function HeroContainer() {
   return (

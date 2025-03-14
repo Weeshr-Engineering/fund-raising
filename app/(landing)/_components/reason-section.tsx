@@ -4,10 +4,12 @@ import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import useFullscreenModal from "@/hooks/use-fullscreen";
 
 export const ReasonComponent = () => {
+  const { openModal, Modal } = useFullscreenModal();
   return (
-    <div className="py-16 w-full text-white">
+    <div id="why-invest" className="py-16 w-full text-white">
       <div className="container mx-auto px-4 max-w-6xl lg:w-full">
         {/* Investment notification */}
         <motion.div
@@ -42,7 +44,11 @@ export const ReasonComponent = () => {
             </p>
 
             <div className="flex justify-end">
-              <Button size={"lg"} className="  text-black  px-6">
+              <Button onClick={() =>
+                openModal(
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true" width="640" height="990" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
+                )
+              } size={"lg"} className="  text-black  px-6 hover:cursor-pointer">
                 Invest Now <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
@@ -97,6 +103,7 @@ export const ReasonComponent = () => {
           </motion.div>
         </div>
       </div>
+      <Modal />
     </div>
   )
 }

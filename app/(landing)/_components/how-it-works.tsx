@@ -19,7 +19,7 @@ export const HowItWorks = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      id="howItWorks"
+      id="faq"
       className="relative flex items-center justify-center md:mb-10 px-3 lg:mb-0 md:py-14 flex-col md:flex-row py-4 md:p-10 lg:p-14 rounded-2xl mt-12 md:mt-12 lg:mt-32 md:items-start md:justify-between min-h-fit lg:gap-16"
     >
       <div className="relative pt-8 md:pt-0 flex justify-start items-start w-full md:w-auto">

@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
         <Image
           src="https://res.cloudinary.com/drykej1am/image/upload/v1741757811/weeshr-funding/iPhone_14_Pro_Mockup_dwa8nl.png"
           alt="logo"
-          width={90}
-          height={80}
+          width={400}
+          height={400}
           className="w-full md:hidden absolute -top-[330px] left-1/2 transform -translate-x-1/2 px-4 -z-10"
         />
         <div className="flex flex-col items-center justify-between p-4 py-6 md:flex-row md:space-x-4 lg:space-x-6">
@@ -99,8 +99,8 @@ const Footer: React.FC = () => {
             <Image
               src="https://res.cloudinary.com/drykej1am/image/upload/v1741783910/weeshr-funding/iPhone_14_Pro_Mockup_1_e7jmcm.png"
               alt="logo"
-              width={90}
-              height={80}
+              width={600}
+              height={800}
               className="px-4 md:block hidden absolute bottom-0 right-9 lg:h-[440px] w-80 h-80 lg:w-[440px] z-50"
             />
           </div>
