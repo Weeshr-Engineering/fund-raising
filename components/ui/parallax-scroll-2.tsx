@@ -6,10 +6,10 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface Team {
-  name: string,
-  title: string,
-  content: string,
-  image: string
+  name: string;
+  title: string;
+  content: string;
+  image: string;
 }
 
 export const ParallaxScrollSecond = ({
@@ -58,10 +58,18 @@ export const ParallaxScrollSecond = ({
               }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
-              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black">
+              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black group cursor-pointer">
                 <div className="w-full h-[270px] relative rounded-4xl overflow-hidden">
-                  <Image alt="" src={el.image} width={300} height={300} className="w-full h-full" />
-                  <div className={`absolute bottom-0 left-0  w-full text-2xl p-6 bg-opacity-50 ${el.name === 'Eugene Lolapo' ? 'bg-gradient-to-t to-blue-[#00000000] via-[#00000000] from-[#6A70FF]' : 'bg-gradient-to-t to-[#00000000] via-[#00000000] from-[#020721]'}`}>
+                  <Image
+                    alt=""
+                    src={el.image}
+                    width={300}
+                    height={300}
+                    className="w-full h-full"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
+                  >
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -71,11 +79,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>
-                    {
-                      el.content
-                    }
-                  </p>
+                  <p>{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -84,10 +88,18 @@ export const ParallaxScrollSecond = ({
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div key={"grid-2" + idx}>
-              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black">
+              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black group cursor-pointer">
                 <div className="w-full h-[270px] relative rounded-4xl overflow-hidden">
-                  <Image alt="" src={el.image} width={300} height={300} className="w-full h-full" />
-                  <div className={`absolute bottom-0 left-0  w-full bg-opacity-50 text-2xl p-6 bg-gradient-to-t to-[#00000000] via-[#00000000] from-[#020721]`}>
+                  <Image
+                    alt=""
+                    src={el.image}
+                    width={300}
+                    height={300}
+                    className="w-full h-full"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
+                  >
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -97,11 +109,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>
-                    {
-                      el.content
-                    }
-                  </p>
+                  <p>{el.content}</p>
                 </div>
               </div>
             </motion.div>
@@ -117,10 +125,18 @@ export const ParallaxScrollSecond = ({
               }}
               key={"grid-3" + idx}
             >
-              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black">
+              <div className="flex flex-col w-full lg:w-[244px] rounded-4xl bg-[#E7E9F2] text-black group cursor-pointer">
                 <div className="w-full h-[270px] relative rounded-4xl overflow-hidden">
-                  <Image alt="" src={el.image} width={300} height={300} className="w-full h-full" />
-                  <div className={`absolute bottom-0 left-0  w-full bg-opacity-50 text-2xl p-6 ${idx === 0 ? 'bg-gradient-to-t to-[#00000000] via-[#00000000] from-[#6A70FF]' : 'bg-gradient-to-t to-[#00000000] via-[#00000000] from-[#020721]'}`}>
+                  <Image
+                    alt=""
+                    src={el.image}
+                    width={300}
+                    height={300}
+                    className="w-full h-full"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 w-full text-2xl p-6 bg-opacity-50 bg-gradient-to-t group-hover:from-[#6A70FF] via-transparent to-transparent`}
+                  >
                     <div className="flex flex-col text-white">
                       {el.name.split(" ").map((part, index) => (
                         <span key={index}>{part}</span>
@@ -130,11 +146,7 @@ export const ParallaxScrollSecond = ({
                 </div>
                 <div className="w-full p-4 text-base">
                   <h1 className="font-bold">{el.title}</h1>
-                  <p>
-                    {
-                      el.content
-                    }
-                  </p>
+                  <p>{el.content}</p>
                 </div>
               </div>
             </motion.div>
