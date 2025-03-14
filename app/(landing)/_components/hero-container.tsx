@@ -2,9 +2,15 @@ import WidthLayout from "@/components/commons/width-layout";
 import { HeroSection } from "./hero-section";
 import { HeroInfo } from "./hero-info";
 import { ProgressBar } from "./progress-bar";
+import { HowItWorks } from "./how-it-works";
+import Companies from "./marqee";
 import EquityCalculator from "./equity-calculator";
 import ProductJourney from "./product-journey";
 import { InvestmentSection } from "./investment-section";
+import { ReasonComponent } from "./reason-section";
+import PhoneUI from "./phoneui-card";
+import { TeamComponent } from "./team-section";
+// import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function HeroContainer() {
   return (
@@ -30,6 +36,13 @@ export default function HeroContainer() {
       <ProductJourney />
       <WidthLayout>
         <InvestmentSection />
+      </WidthLayout>
+      <PhoneUI />
+      <ReasonComponent />
+      <TeamComponent />
+      <WidthLayout>
+        <Companies />
+        <HowItWorks />
       </WidthLayout>
     </div>
   );
