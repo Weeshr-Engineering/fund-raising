@@ -40,14 +40,19 @@ export const InvestmentSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">
               Terms of Investment
             </h2>
-            <p className="text-lg text-gray-300 max-w-6xl text-justify">
+            <p className="text-sm text-muted max-w-6xl text-justify">
               We are raising a $150,000 at 10% equity from friends, family,
-              angel investors and networks. This pre-seed round will enable Weeshr to establish its
-              market by building the necessary infrastructure to drive higher traction in preparation for our seed rounded.
+              angel investors and networks. This pre-seed round will enable
+              Weeshr to establish its market by building the necessary
+              infrastructure to drive higher traction in preparation for our
+              seed rounded.
               <br />
-              To ensure legal structure and investor protection, we are utilizing a Special Purpose Vehicle (SPV)
-              to facilitate and formalize the investment agreement. Investors equity will be bought back at 2x value upon completion of our next seed round.
-              The equity buyback is fixed for all pre-seed equity holders, providing a structure and trasnparent exit strategy.
+              To ensure legal structure and investor protection, we are
+              utilizing a Special Purpose Vehicle (SPV) to facilitate and
+              formalize the investment agreement. Investors equity will be
+              bought back at 2x value upon completion of our next seed round.
+              The equity buyback is fixed for all pre-seed equity holders,
+              providing a structure and trasnparent exit strategy.
             </p>
 
             <div className="flex justify-end">

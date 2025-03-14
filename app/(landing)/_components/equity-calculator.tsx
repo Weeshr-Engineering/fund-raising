@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Calculator, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Calculator } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Card } from "@/components/ui/card";
@@ -19,13 +18,7 @@ const EquityCalculator = () => {
   const NEXT_ROUND_MULTIPLIER = 1.5; // 3x return for next round
 
   // Format currency with commas
-  const formatCurrency = (value: number): string => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0,
-    }).format(value);
-  };
+
 
   // Format number with comma separation
   const formatNumber = (value: number): string => {

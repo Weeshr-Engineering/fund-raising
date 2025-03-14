@@ -1,5 +1,4 @@
 import HeroContainer from "./(landing)/_components/hero-container";
-import { HowItWorks } from "./(landing)/_components/how-it-works";
 
 export default function Home() {
   return (

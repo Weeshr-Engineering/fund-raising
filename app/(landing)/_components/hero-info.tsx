@@ -2,8 +2,6 @@
 
 // import { motion } from "motion/react";
 import * as motion from "motion/react-client";
-import { DollarSign, Percent, Flag, PieChart, TrendingUp } from "lucide-react";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import YouTubeThumbnail from "@/components/commons/thumbnail";
 

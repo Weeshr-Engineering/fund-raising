@@ -14,25 +14,19 @@ import { TeamComponent } from "./team-section";
 
 export default function HeroContainer() {
   return (
-    <div
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/drykej1am/image/upload/v1741622631/weeshr_website/HeroBGElements_wlz14l.png')",
-      }}
-      className="items-center justify-items-center bg-cover bg-top w-full pb-20"
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="items-center justify-items-center  bg-top w-full pb-20">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start bg-cover w-full md:bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1741622631/weeshr_website/HeroBGElements_wlz14l.png')] ">
         <WidthLayout>
           <HeroSection />
           <div className="backdrop-blur-xl bg-foreground/50 lg:bg-transparent lg:backdrop-blur-none rounded-2xl px-4 md:px-6 pb-10">
             <HeroInfo />
           </div>
+        </WidthLayout>{" "}
+        <WidthLayout narrow={true}>
+          <ProgressBar />
         </WidthLayout>
+        <EquityCalculator />
       </main>{" "}
-      <WidthLayout narrow={true}>
-        <ProgressBar />
-      </WidthLayout>
-      <EquityCalculator />
       <ProductJourney />
       <WidthLayout>
         <InvestmentSection />

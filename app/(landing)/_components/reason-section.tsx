@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
@@ -18,11 +18,15 @@ export const ReasonComponent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-[92px] lg:text-[250px] font-bold text-center relative">
+          <div className="text-7xl md:text-[92px] lg:text-[250px] font-bold text-center relative">
             BIGGEST
             <Image
-              className="absolute -bottom-20 -left-32 h-60 w-60 z-30 hidden md:inline-block" 
-              src='https://res.cloudinary.com/drykej1am/image/upload/v1741783899/weeshr-funding/Navigation_rksdgk.svg' alt='' width={100} height={100} />
+              className="absolute -bottom-20 -left-32 h-60 w-60 z-30 hidden md:inline-block"
+              src="https://res.cloudinary.com/drykej1am/image/upload/v1741783899/weeshr-funding/Navigation_rksdgk.svg"
+              alt=""
+              width={100}
+              height={100}
+            />
           </div>
         </motion.div>
 
@@ -38,17 +42,34 @@ export const ReasonComponent = () => {
               Reasons for you to invest in Weeshr
             </h2>
             <p className="text-lg text-gray-300 max-w-6xl text-justify">
-              We are a fast growing with a ready market. The affrican virtual, social and online gifting market gifting
-              is soaring. Gifting has been  major part of the African culture in this digital age. People in
-              Africa have sought online gift registry now more than ever and they resort to using platforms like amazon. The problem with that is that it is not tailored to their needs in terms of currency, experience and features.
+              We are a fast growing with a ready market. The affrican virtual,
+              social and online gifting market gifting is soaring. Gifting has
+              been major part of the African culture in this digital age. People
+              in Africa have sought online gift registry now more than ever and
+              they resort to using platforms like amazon. The problem with that
+              is that it is not tailored to their needs in terms of currency,
+              experience and features.
             </p>
 
             <div className="flex justify-end">
-              <Button onClick={() =>
-                openModal(
-                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true" width="640" height="990" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
-                )
-              } size={"lg"} className="  text-black  px-6 hover:cursor-pointer">
+              <Button
+                onClick={() =>
+                  openModal(
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
+                      width="640"
+                      height="990"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                    >
+                      Loading…
+                    </iframe>
+                  )
+                }
+                size={"lg"}
+                className="  text-black  px-6 hover:cursor-pointer"
+              >
                 Invest Now <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
@@ -77,7 +98,9 @@ export const ReasonComponent = () => {
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">Market valuation</p>
-                <h3 className="text-base font-bold text-background">and growing</h3>
+                <h3 className="text-base font-bold text-background">
+                  and growing
+                </h3>
               </div>
             </div>
 
@@ -87,7 +110,9 @@ export const ReasonComponent = () => {
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">50M processed</p>
-                <h3 className="text-base font-bold text-background">organically in 4 months</h3>
+                <h3 className="text-base font-bold text-background">
+                  organically in 4 months
+                </h3>
               </div>
             </div>
 
@@ -97,7 +122,9 @@ export const ReasonComponent = () => {
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-bold">Organically with zero</p>
-                <h3 className="text-base font-bold text-background">cost of aquisition</h3>
+                <h3 className="text-base font-bold text-background">
+                  cost of aquisition
+                </h3>
               </div>
             </div>
           </motion.div>
@@ -105,5 +132,5 @@ export const ReasonComponent = () => {
       </div>
       <Modal />
     </div>
-  )
-}
+  );
+};

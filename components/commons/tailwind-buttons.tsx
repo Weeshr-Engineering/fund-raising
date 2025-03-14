@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { ButtonsCard } from "../ui/aceternity-buttons";
 import Link from "next/link";
 
 interface ButtonProps {
@@ -34,7 +33,7 @@ export function TailwindcssButtons() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ButtonsCard>{button.component}</ButtonsCard>{" "}
+            {/* <ButtonsCard>{button.component}</ButtonsCard>{" "} */}
           </a>
         ))}
       </div>
