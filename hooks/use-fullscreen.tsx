@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 
 const useFullscreenModal = () => {
@@ -16,18 +17,20 @@ const useFullscreenModal = () => {
 
   const Modal = () =>
     isOpen ? (
-      <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center p-4 overflow-y-auto z-[100]">
-        <div className="relative w-full max-w-2xl">
+      <div className="fixed inset-0 flex items-center justify-center bg-cover bg-center bg-blend-multiply bg-black/60 md:bg-black/80 md:bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1740181910/weehser%20pay/WEESHRWEESHR_WEESHRWEESH_._R_WEESHRWEESHR_WEESHRWEESHR_blwitm.png')] p-4 z-[300]">
+        <div className="relative bg-white rounded-lg shadow-lg w-full max-w-4xl h-[90vh] sm:h-auto">
           {/* Close Button */}
           <button
-            onClick={closeModal}
-            className="absolute top-50 right-0 text-white bg-red-600 hover:bg-red-700 px-3 py-1 rounded-lg transition"
+            onClick={() => setIsOpen(false)}
+            className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl"
           >
-            ✕ Close
+            ✕
           </button>
 
-          {/* Dynamic Modal Content */}
-          <div className="bg-white rounded-lg shadow-lg p-4">{modalContent}</div>
+          {/* Responsive Iframe Container */}
+          <div className="py-4 h-full md:min-h-[70dvh] overflow-hidden">
+            {modalContent}            
+          </div>
         </div>
       </div>
     ) : null;

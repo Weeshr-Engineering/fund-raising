@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
 interface YouTubeThumbnailProps {
   url: string;
+  fallbackImage?: string;
 }
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
@@ -24,16 +25,37 @@ const extractVideoId = (url: string): string | null => {
   }
 };
 
-const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url }) => {
+const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url, fallbackImage = "/fallback-thumbnail.jpg" }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
   const videoId = extractVideoId(url);
+
+  useEffect(() => {
+    if (videoId) {
+      const checkThumbnail = async () => {
+        const resolutions = ["maxresdefault", "hqdefault", "mqdefault", "default"];
+        for (let res of resolutions) {
+          const testUrl = `https://img.youtube.com/vi/${videoId}/${res}.jpg`;
+          try {
+            const response = await fetch(testUrl, { method: "HEAD" });
+            if (response.ok) {
+              setThumbnailUrl(testUrl);
+              return;
+            }
+          } catch {
+            continue;
+          }
+        }
+        setThumbnailUrl(fallbackImage);
+      };
+      checkThumbnail();
+    }
+  }, [videoId, fallbackImage]);
 
   if (!videoId) return <p>Invalid YouTube URL</p>;
 
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-
   return (
-    <div className="relative w-full h-full rounded-lg overflow-hidden">
+    <div className="relative w-full aspect-video min-h-[150px] h-full rounded-lg overflow-hidden">
       {isPlaying ? (
         <div className="absolute inset-0 w-full h-full">
           <ReactPlayer
@@ -47,13 +69,15 @@ const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url }) => {
         </div>
       ) : (
         <div className="absolute inset-0 w-full h-full cursor-pointer" onClick={() => setIsPlaying(true)}>
-          <Image
-            src={thumbnailUrl}
-            alt="YouTube Thumbnail"
-            fill
-            className="object-cover"
-            priority
-          />
+          {thumbnailUrl && (
+            <Image
+              src={thumbnailUrl}
+              alt="YouTube Thumbnail"
+              fill
+              className="object-cover"
+              priority
+            />
+          )}
           <div className="absolute inset-0 flex items-center justify-center bg-black/50">
             <svg
               xmlns="http://www.w3.org/2000/svg"

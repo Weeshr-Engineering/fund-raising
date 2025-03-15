@@ -126,10 +126,10 @@ const Footer: React.FC = () => {
               rel="noreferrer"
             >
               <Image
-                src="https://res.cloudinary.com/dufimctfc/image/upload/v1723963374/Google_Play_zlkalx.svg"
+                src="https://res.cloudinary.com/drykej1am/image/upload/v1741754206/weeshr-funding/Frame_28991_zbsyrl.png"
                 alt="Playstore Button"
-                width={100}
-                height={60}
+                width={110}
+                height={80}
               />
             </a>
           </div>

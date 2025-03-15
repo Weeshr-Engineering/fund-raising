@@ -63,7 +63,7 @@ const journeyItems: JourneyItem[] = [
 
 const ProductJourney = () => {
   return (
-    <div className="py-16  text-white pt-30 block">
+    <div className="py-16  text-white pt-30 block max-w-screen">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-12"
@@ -85,7 +85,7 @@ const ProductJourney = () => {
             <p>Investment Round</p>
           </div>
 
-          <div className="w-[200px] sm:w-[350px] md:w-full overflow-x-auto xl:overflow-clip whitespace-nowrap ">
+          <div className="w-full md:w-[200px] sm:w-[350px] md:w-full overflow-x-auto xl:overflow-clip whitespace-nowrap ">
             <div className="w-[1000px] over">
               {/* Journey Timeline container */}
               <div className="relative mb-10">

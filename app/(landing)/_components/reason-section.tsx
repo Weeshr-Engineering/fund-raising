@@ -8,6 +8,11 @@ import useFullscreenModal from "@/hooks/use-fullscreen";
 
 export const ReasonComponent = () => {
   const { openModal, Modal } = useFullscreenModal();
+  const getIframeHeight = () => {
+    if (window.innerWidth < 640) return "80vh"; // Mobile
+    if (window.innerWidth < 1024) return "85vh"; // Tablet
+    return "90vh"; // Desktop
+  };
   return (
     <div id="why-invest" className="py-16 w-full text-white">
       <div className="container mx-auto px-4 max-w-6xl lg:w-full">
@@ -57,8 +62,8 @@ export const ReasonComponent = () => {
                   openModal(
                     <iframe
                       src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
-                      width="640"
-                      height="990"
+                      className="w-full h-full max-w-full"
+                      style={{ height: getIframeHeight() }}
                       frameBorder="0"
                       marginHeight={0}
                       marginWidth={0}
@@ -94,9 +99,9 @@ export const ReasonComponent = () => {
               </div>
             </div>
 
-            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#C6EDF6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
+            <div className="glass rounded-xl py-10 pl-12 pr-4 bg-[#F4D5F6] flex flex-col lg:flex-row lg:items-start justify-between items-center h-52 md:h-full">
               <p className="md:w-10 h-10 rounded-full w-full lg:w-auto  flex items-center text-4xl font-semibold">
-                $200B
+                $100B
               </p>
               <div className="space-y-0 lg:text-right text-left w-full lg:w-auto">
                 <p className="text-base font-normal">Market valuation</p>

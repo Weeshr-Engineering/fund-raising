@@ -1,11 +1,18 @@
-"use state";
+"use client";
 
 import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Icon } from "@iconify/react";
+import useFullscreenModal from "@/hooks/use-fullscreen";
 
 export const InvestmentSection = () => {
+  const { openModal, Modal } = useFullscreenModal();
+  const getIframeHeight = () => {
+    if (window.innerWidth < 640) return "80vh"; // Mobile
+    if (window.innerWidth < 1024) return "85vh"; // Tablet
+    return "90vh"; // Desktop
+  };
   return (
     <div className="py-16  text-white">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -56,7 +63,22 @@ export const InvestmentSection = () => {
             </p>
 
             <div className="flex justify-end">
-              <Button size={"lg"} className="  text-black  px-6">
+              <Button
+                onClick={() =>
+                  openModal(
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
+                      className="w-full h-full max-w-full"
+                      style={{ height: getIframeHeight() }}
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                    >
+                      Loading…
+                    </iframe>
+                  )
+                }
+                size={"lg"} className="  text-black  px-6">
                 Invest Now <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </div>
@@ -126,6 +148,7 @@ export const InvestmentSection = () => {
           </motion.div>
         </div>
       </div>
+      <Modal />
     </div>
   );
 };
