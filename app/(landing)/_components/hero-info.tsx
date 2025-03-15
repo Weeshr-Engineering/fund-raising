@@ -32,27 +32,6 @@ export const HeroInfo = () => {
                 className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-900"
               >
                 <YouTubeThumbnail url="https://youtu.be/pjPziqbHExY" />
-                {/*<Image
-                  src="https://res.cloudinary.com/drykej1am/image/upload/v1695036799/cld-sample.jpg"
-                  alt="Jupiter Promotional"
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-lg">
-                    <div className="ml-1 text-slate-900">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                      </svg>
-                    </div>
-                  </button>
-                </div>*/}
               </motion.div>
             </div>
 
@@ -65,20 +44,20 @@ export const HeroInfo = () => {
             >
               <div className="text-muted">
                 <p className=" mb-4 text-sm">
-                  Claim an equity share in our pre-seed round in a $200 Billion
+                  Claim an equity share in our pre-seed round in a <span className="font-bold">$200 Billion </span>
                   market across Africa. Join the movement to tranforming gift
                   registry for 1.5 Billion Africans. Weeshr is a tech startup
-                  focused on revolutionizing the gift registry ecosystem in
-                  Africa, Asia and the Middle East. We are making gifting easy,
+                  focused on revolutionizing the gift registry ecosystem in.
+                  We are making gifting easy,
                   localized and seamless in events like weddings, birthdays,
                   anniversaries and more.
                 </p>
                 <p className="mb-4 text-sm">
                   Launched in October 1st 2024, we are are fast growing tech
                   startup growing at 2,000+ users monthly organically and have
-                  processed over 41,000,000 NGN in transactions so far. There is
+                  processed over 50,000,000 NGN in transactions so far at zero cost. There is
                   an urgent need for infrastructure to meet up with our growth
-                  speed, grow faster and expand. This why we are raising ou{" "}
+                  speed, grow faster and expand. This why we are raising our{" "}
                   <span className="font-bold">Pre-seed</span> round.
                 </p>
                 <p className="text-sm">
@@ -101,7 +80,7 @@ export const HeroInfo = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <motion.div
-            className="glass rounded-xl p-6 bg-[#DCDEFF] flex justify-between flex-col h-52 md:h-full"
+            className="glass rounded-xl p-6 bg-[#C6EDF6] flex justify-between flex-col h-52 md:h-full"
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           >
             <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">
@@ -155,7 +134,7 @@ export const HeroInfo = () => {
           </motion.div>
 
           <motion.div
-            className="glass rounded-xl p-6 py-4 bg-[#F4D5F6] flex justify-between flex-col"
+            className="glass rounded-xl p-6 py-4 bg-[#DCDEFF] flex justify-between flex-col"
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           >
             <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4">

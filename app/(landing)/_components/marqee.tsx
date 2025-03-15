@@ -7,6 +7,11 @@ import useFullscreenModal from "@/hooks/use-fullscreen";
 
 const Companies = () => {
   const { openModal, Modal } = useFullscreenModal();
+  const getIframeHeight = () => {
+    if (window.innerWidth < 640) return "80vh"; // Mobile
+    if (window.innerWidth < 1024) return "85vh"; // Tablet
+    return "90vh"; // Desktop
+  };
   const openInNewTab = (url: string) => {
     const newTab = window.open(url, "_blank");
 
@@ -46,8 +51,8 @@ const Companies = () => {
               openModal(
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
-                  width="640"
-                  height="990"
+                  className="w-full h-full max-w-full"
+                  style={{ height: getIframeHeight() }}
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
@@ -74,8 +79,8 @@ const Companies = () => {
               openModal(
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSdycDBUjIDj1vi6tper18Wi2z3UPOHtUrFwtRLqS7ksS7cB6w/viewform?embedded=true"
-                  width="640"
-                  height="1270"
+                  className="w-full h-full max-w-full"
+                  style={{ height: getIframeHeight() }}
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}

@@ -1,42 +1,42 @@
 export const howItWorksList = [
   {
-    question: "Create an account",
+    question: "How much equity are selling?",
     answer:
-      "Easily create your account in less than a minute and get your wishlist. You can also upload your picture to get more visibility. 😎",
+      "We are selling 10% equity of Weeshr at %150k to help us with our fast growth. This equity however would be bought back at the completion of our Seed round",
   },
   {
-    question: "Create your wishlist",
+    question: "What is the minimum investment size?",
     answer:
-      "Curate as many wishes as you can. Set the picture of what you want, set the price, and describe the details of each gift the way you want it. 📃",
+      "$500",
   },
   {
-    question: "Share your wishlink",
+    question: "What kind of shares are you issuing?",
     answer:
-      "You can share your wishlink with fans, family, and friends for them to gift you. Share as much as you can on your socials and with your network. 🤩",
+      "Equity in form of SAFEs",
   },
   {
-    question: "Contribute towards your wish",
+    question: "How much are you raising?",
     answer:
-      "Your fans and friends can contribute their bits to complete your wish until it is fulfilled. So, get the link to as many people as possible. 🤭",
+      "$150K at $1.5M valuation",
   },
   {
-    question: "Gifts from strangers",
+    question: "What is the current valuation of the company?",
     answer:
-      "The Moments feature allows your wishes to show up on other users' timelines so they can decide to gift you if you’re lucky. So, upload your finest pictures. 😉",
+      "$1.5M",
   },
   {
-    question: "Withdraw your wishes",
+    question: "Why should i invest?",
     answer:
-      "Your birthday is merrier and happier with Weeshr, and you can cash out your gifts your own way. 🥳",
+      "African events, celebration and gifting culture is a huge opportunity, reecently, we have seen a surge in online gift registry usage in Africa but the problem is, the solutions people use are from outsid Africa with a typical example being Amazon gift registry which is not tailored to the African market in terms of experience, currency and features. You are investing in Africa's primary gift registry that's growing rapidly. We found a loop in the market. One that is worth over $200B across Africa. We built a tailored solution that's seeing fastt adoption and we need you to get it off the ground to a point we raise our seed round.",
   },
   {
-    question: "Grow your friends list",
+    question: "How much have you raised so far?",
     answer:
-      "Grow your friends list so you have a host of people getting notified and gifting you when you make your wish. 👨‍👩‍👦‍👦",
+      "Please see the investment progress bar above",
   },
   {
-    question: "You’re in control",
+    question: "Why invest in startups",
     answer:
-      "Define your profile look and feel, your bio, settings, and more. 😇",
+      "Investing in startups offers high growth potential, early market entry, and significant returns. It drives innovation, job creation, and industry disruption. While risky, startups provide diversification and the chance to back visionary founders shaping the future.",
   },
 ];

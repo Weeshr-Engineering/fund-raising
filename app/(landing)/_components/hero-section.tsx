@@ -11,7 +11,7 @@ export const HeroSection = () => {
               className={`relative whitespace-nowrap px-2 bg-gradient-custom bg-clip-text text-transparent text-5xl`}
               style={{ fontFamily: "Playwrite CU, sans-serif" }}
             >
-              weesh
+              weeshr
             </span>
           </span>
         </span>

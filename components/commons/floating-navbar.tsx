@@ -61,6 +61,28 @@ export const FloatingNav = ({
     }
   });
 
+  const [isvisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY === 0) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     setIsAuthenticated(false);
@@ -77,7 +99,8 @@ export const FloatingNav = ({
   return (
     <> 
       <AnimatePresence mode="wait">
-        <div className="justify-around hidden md:flex">
+        <div className={`justify-around shadow-md transition-transform duration-300 hidden md:flex ${visible ? "translate-y-0" : "-translate-y-full"
+          }`}>
           <motion.div
             initial={{
               opacity: 1,

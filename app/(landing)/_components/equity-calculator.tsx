@@ -7,11 +7,21 @@ import { Input } from "@/components/ui/input";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Card } from "@/components/ui/card";
 import { Icon } from "@iconify/react";
+import useFullscreenModal from "@/hooks/use-fullscreen";
+
 const EquityCalculator = () => {
   const [investment, setInvestment] = useState<string>("");
   const [equity, setEquity] = useState<number | null>(null);
   const [buyBackValue, setBuyBackValue] = useState<number | null>(null);
   const isMobile = useIsMobile();
+  const { openModal, Modal } = useFullscreenModal();
+
+  // style
+  const getIframeHeight = () => {
+    if (window.innerWidth < 640) return "80vh"; // Mobile
+    if (window.innerWidth < 1024) return "85vh"; // Tablet
+    return "90vh"; // Desktop
+  };
 
   // Constants
   const EQUITY_RATE = 15000; // $15,000 per 1% equity
@@ -129,7 +139,22 @@ const EquityCalculator = () => {
                 </div>
               </div>
             </div>
-            <Card className="h-28  rounded-3xl bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1741622518/weeshr_website/Rectangle_3842_sicnxb.png')] bg-cover bg-center flex flex-row w-full justify-between items-center p-4 pl-6 border-none mt-3 cursor-pointer">
+            <Card 
+              onClick={() =>
+                openModal(
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
+                    className="w-full h-full max-w-full"
+                    style={{ height: getIframeHeight() }}
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                  >
+                    Loading…
+                  </iframe>
+                )
+              }
+              className="h-28  rounded-3xl bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1741622518/weeshr_website/Rectangle_3842_sicnxb.png')] bg-cover bg-center flex flex-row w-full justify-between items-center p-4 pl-6 border-none mt-3 cursor-pointer">
               <h4 className="max-w-3 text-xl text-white font-extrabold">
                 Invest Now
               </h4>
@@ -201,7 +226,22 @@ const EquityCalculator = () => {
             </div>
 
             {/* Invest Now Section - 1 column */}
-            <Card className="h-full  rounded-3xl bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1741622518/weeshr_website/Rectangle_3842_sicnxb.png')] bg-cover bg-center flex flex-col w-full justify-around items-start p-4 pl-6 lg:pr-0 border-none cursor-pointer lg:rounded-l-3xl lg:rounded-r-none ">
+            <Card
+              onClick={()=>
+                openModal(
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
+                        className="w-full h-full max-w-full"
+                        style={{ height: getIframeHeight() }}
+                        frameBorder="0"
+                        marginHeight={0}
+                        marginWidth={0}
+                      >
+                        Loading…
+                      </iframe>
+                    )
+                  }
+             className="h-full  rounded-3xl bg-[url('https://res.cloudinary.com/drykej1am/image/upload/v1741622518/weeshr_website/Rectangle_3842_sicnxb.png')] bg-cover bg-center flex flex-col w-full justify-around items-start p-4 pl-6 lg:pr-0 border-none cursor-pointer lg:rounded-l-3xl lg:rounded-r-none ">
               <Icon
                 icon="solar:arrow-right-linear"
                 className="text-white h-12 w-12 mt-10"
@@ -213,6 +253,7 @@ const EquityCalculator = () => {
           </div>
         )}
       </div>
+      <Modal />
     </section>
   );
 };

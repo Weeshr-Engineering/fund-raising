@@ -43,7 +43,7 @@ const PhoneUI = () => {
         </div>
         {/* Phone image */}
         <Image
-          className="absolute place-self-center -bottom-0 right-0 w-[140%] lg:w-[50%] h-[66%] lg:h-[650px] lg:object-none object-contain"
+          className="absolute place-self-center -bottom-0 lg:bottom-6 z-0 right-0 w-[140%] lg:w-[50%] h-[66%] md:h-[650px] lg:object-none object-contain"
           src="https://res.cloudinary.com/drykej1am/image/upload/v1741769959/weeshr-funding/iPhones_rerbdo.png"
           alt=""
           width={500}
@@ -51,7 +51,7 @@ const PhoneUI = () => {
         />
         {/* Rock base */}
         <Image
-          className="absolute place-self-center bottom-0 right-0 w-full lg:w-[55%] lg:place-self-start lg:right-0 h-36 object-none"
+          className="absolute place-self-center bottom-0 right-0 -z-10 w-full lg:w-[55%] lg:place-self-start lg:right-0 h-36 object-none"
           src="https://res.cloudinary.com/drykej1am/image/upload/v1741757808/weeshr-funding/mockup_9_Background_Removed_1_chlizf.png"
           alt=""
           width={600}
@@ -102,7 +102,7 @@ const PhoneUI = () => {
                 key={index}
                 className={`absolute hover:p-4 flex items-center justify-center gap-4 p-3 rounded-full bg-white shadow-md ${item.className}`}
                 animate={getRandomAnimation().animate}
-                // transition={getRandomAnimation().transition}
+              // transition={getRandomAnimation().transition}
               >
                 <Image src={item.img} alt="" width={20} height={20} />
                 <p>{item.text}</p>

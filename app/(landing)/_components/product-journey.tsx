@@ -85,7 +85,7 @@ const ProductJourney = () => {
             <p>Investment Round</p>
           </div>
 
-          <div className="w-[200px] sm:w-[350px] md:w-full overflow-x-auto xl:overflow-clip whitespace-nowrap ">
+          <div className="w-full md:w-[200px] sm:w-[350px] md:w-full overflow-x-auto xl:overflow-clip whitespace-nowrap ">
             <div className="w-[1000px] over">
               {/* Journey Timeline container */}
               <div className="relative mb-10">
