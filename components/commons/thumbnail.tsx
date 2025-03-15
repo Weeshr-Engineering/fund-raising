@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
 interface YouTubeThumbnailProps {
   url: string;
+  fallbackImage?: string;
 }
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
@@ -24,13 +25,18 @@ const extractVideoId = (url: string): string | null => {
   }
 };
 
-const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url }) => {
+const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url, fallbackImage = "/fallback-thumbnail.jpg" }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
   const videoId = extractVideoId(url);
 
-  if (!videoId) return <p>Invalid YouTube URL</p>;
+  useEffect(() => {
+    if (videoId) {
+      setThumbnailUrl(`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`);
+    }
+  }, [videoId]);
 
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  if (!videoId) return <p>Invalid YouTube URL</p>;
 
   return (
     <div className="relative w-full h-full rounded-lg overflow-hidden">
@@ -47,13 +53,16 @@ const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url }) => {
         </div>
       ) : (
         <div className="absolute inset-0 w-full h-full cursor-pointer" onClick={() => setIsPlaying(true)}>
-          <Image
-            src={thumbnailUrl}
-            alt="YouTube Thumbnail"
-            fill
-            className="object-cover"
-            priority
-          />
+          {thumbnailUrl && (
+            <Image
+              src={thumbnailUrl}
+              alt="YouTube Thumbnail"
+              fill
+              className="object-cover"
+              priority
+              onError={() => setThumbnailUrl(fallbackImage)} // Switch to fallback if error occurs
+            />
+          )}
           <div className="absolute inset-0 flex items-center justify-center bg-black/50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
