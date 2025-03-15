@@ -13,7 +13,7 @@ export const Business = () => {
       className="mt-6 max-w-screen "
     >
       <WidthLayout>
-        <div className="relative pt-8 lg:pl-20% md:pt-0 flex justify-start items-start w-full md:w-auto">
+        <div className="relative pt-8 pb-8 lg:pb-0 lg:pl-20% md:pt-0 flex justify-start items-start w-full md:w-auto">
           <h2 className="text-white pt-3 md:pb-10 pl-4 md:pl-0 font-semibold  text-left w-full flex justify-start items-start text-3xl md:text-5xl">
             Businesses they`ve
             <br />

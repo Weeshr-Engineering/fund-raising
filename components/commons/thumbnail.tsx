@@ -55,7 +55,7 @@ const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url, fallbackImage 
   if (!videoId) return <p>Invalid YouTube URL</p>;
 
   return (
-    <div className="relative w-full aspect-video min-h-[150px] rounded-lg overflow-hidden">
+    <div className="relative w-full aspect-video min-h-[150px] h-full rounded-lg overflow-hidden">
       {isPlaying ? (
         <div className="absolute inset-0 w-full h-full">
           <ReactPlayer
