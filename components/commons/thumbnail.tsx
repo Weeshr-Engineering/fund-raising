@@ -32,9 +32,25 @@ const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url, fallbackImage 
 
   useEffect(() => {
     if (videoId) {
-      setThumbnailUrl(`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`);
+      const checkThumbnail = async () => {
+        const resolutions = ["maxresdefault", "hqdefault", "mqdefault", "default"];
+        for (let res of resolutions) {
+          const testUrl = `https://img.youtube.com/vi/${videoId}/${res}.jpg`;
+          try {
+            const response = await fetch(testUrl, { method: "HEAD" });
+            if (response.ok) {
+              setThumbnailUrl(testUrl);
+              return;
+            }
+          } catch {
+            continue;
+          }
+        }
+        setThumbnailUrl(fallbackImage);
+      };
+      checkThumbnail();
     }
-  }, [videoId]);
+  }, [videoId, fallbackImage]);
 
   if (!videoId) return <p>Invalid YouTube URL</p>;
 
@@ -60,7 +76,6 @@ const YouTubeThumbnail: React.FC<YouTubeThumbnailProps> = ({ url, fallbackImage 
               fill
               className="object-cover"
               priority
-              onError={() => setThumbnailUrl(fallbackImage)} // Switch to fallback if error occurs
             />
           )}
           <div className="absolute inset-0 flex items-center justify-center bg-black/50">
