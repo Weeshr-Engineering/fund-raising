@@ -10,7 +10,7 @@ export const Business = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="mt-6 "
+      className="mt-6 max-w-screen "
     >
       <WidthLayout>
         <div className="relative pt-8 lg:pl-20% md:pt-0 flex justify-start items-start w-full md:w-auto">
