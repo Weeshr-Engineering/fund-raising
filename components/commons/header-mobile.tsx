@@ -9,21 +9,22 @@ import { Button } from "../ui/button";
 import { navigationLinks } from "@/lib/constants/navigation-items"; // Import the navigation links
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
+import useFullscreenModal from "@/hooks/use-fullscreen";
 
 export default function HeaderMobile() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Manage login state
   const router = useRouter();
   const pathname = usePathname();
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const { openModal, Modal } = useFullscreenModal();
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     setIsAuthenticated(false);
-    router.push("/login");
+    // router.push("/login");
   };
   const handleLogin = () => {
-    router.push("/login");
+    router.push("#");
   };
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export default function HeaderMobile() {
           <AnimatePresence>
             {isNavOpen && (
               <motion.div
-                className="showMenuNav"
+                className="showMenuNav bg-background"
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -100 }}
@@ -120,9 +121,22 @@ export default function HeaderMobile() {
                     </Link>
                   ) : (
                     <button
-                      onClick={handleLogin}
+                      onClick={() =>
+                        openModal(
+                          <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true"
+                            width="640"
+                            height="990"
+                            frameBorder="0"
+                            marginHeight={0}
+                            marginWidth={0}
+                          >
+                            Loading…
+                          </iframe>
+                        )
+                      }
                       className={cn(
-                        "border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] px-4 py-2 rounded-full text-neutral-500"
+                        "border text-sm font-medium relative bg-white border-neutral-200 dark:border-white/[0.2] px-4 py-2 rounded-full text-neutral-500"
                       )}
                     >
                       <span>Invest</span>
@@ -146,7 +160,6 @@ export default function HeaderMobile() {
           height: 100vh;
           top: 0;
           left: 0;
-          background: white;
           z-index: 10;
           display: flex;
           flex-direction: column;
@@ -154,6 +167,7 @@ export default function HeaderMobile() {
           align-items: center;
         }
       `}</style>
+      <Modal />
     </div>
   );
 }
