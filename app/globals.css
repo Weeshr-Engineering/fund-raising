@@ -167,3 +167,8 @@ html {
 .text-h6 {
   @apply text-base font-medium leading-relaxed tracking-wide lg:text-lg;
 }
+@layer base {
+  html, body {
+    @apply overflow-x-hidden;
+  }
+}
