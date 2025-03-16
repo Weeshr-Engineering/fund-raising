@@ -55,7 +55,7 @@ export const HeroInfo = () => {
                 <p className="mb-4 text-sm">
                   Launched in October 1st 2024, we are are fast growing tech
                   startup growing at 2,000+ users monthly organically and have
-                  processed over &#8358; 50,000,000 NGN in transactions so far at zero cost. There is
+                  processed over &#8358; 50,000,000  in transactions so far at zero cost. There is
                   an urgent need for infrastructure to meet up with our growth
                   speed, grow faster and expand. This why we are raising our{" "}
                   <span className="font-bold">Pre-seed</span> round.
