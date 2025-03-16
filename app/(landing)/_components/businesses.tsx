@@ -40,7 +40,7 @@ function Infinitystrip() {
   const duplicatedIcons = [...icons, ...icons];
 
   return (
-    <div className="relative overflow-hidden h-[7vh] w-full space-y-6">
+    <div className="relative overflow-hidden min-h-[7vh] w-full space-y-6">
       <Marquee
         pauseOnHover
         className="flex items-center justify-between w-full gap-4"

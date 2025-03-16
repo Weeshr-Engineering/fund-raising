@@ -44,7 +44,7 @@ export const HeroInfo = () => {
             >
               <div className="text-muted">
                 <p className=" mb-4 text-sm">
-                  Claim an equity share in our pre-seed round in a <span className="font-bold">$200 Billion </span>
+                  Claim an equity share in our pre-seed round in a <span className="font-bold">$100 Billion </span>
                   market across Africa. Join the movement to tranforming gift
                   registry for 1.5 Billion Africans. Weeshr is a tech startup
                   focused on revolutionizing the gift registry ecosystem in.
@@ -55,7 +55,7 @@ export const HeroInfo = () => {
                 <p className="mb-4 text-sm">
                   Launched in October 1st 2024, we are are fast growing tech
                   startup growing at 2,000+ users monthly organically and have
-                  processed over 50,000,000 NGN in transactions so far at zero cost. There is
+                  processed over &#8358; 50,000,000 NGN in transactions so far at zero cost. There is
                   an urgent need for infrastructure to meet up with our growth
                   speed, grow faster and expand. This why we are raising our{" "}
                   <span className="font-bold">Pre-seed</span> round.
