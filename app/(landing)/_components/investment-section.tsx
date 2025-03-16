@@ -57,7 +57,7 @@ export const InvestmentSection = () => {
               To ensure legal structure and investor protection, we are
               utilizing a Special Purpose Vehicle (SPV) to facilitate and
               formalize the investment agreement. Investors equity will be
-              bought back at 2x value upon completion of our next seed round.
+              bought back at 1.5x value upon completion of our next seed round.
               The equity buyback is fixed for all pre-seed equity holders,
               providing a structure and trasnparent exit strategy.
             </p>

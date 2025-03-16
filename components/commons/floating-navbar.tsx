@@ -165,7 +165,7 @@ export const FloatingNav = ({
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf18f7Gflteu6WummqG29rETayofKsrxLjaKt0LZQZ0qVim1g/viewform?embedded=true" width="640" height="990" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
                   )}
                   className={cn(
-                    "border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] px-4 py-2 rounded-full text-neutral-500 bg-white"
+                    "border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] flex items-center justify-center py-2 w-20 h-10 rounded-full text-neutral-500 bg-white"
                   )}
                 >
                   <span className="text-black">Invest</span>
