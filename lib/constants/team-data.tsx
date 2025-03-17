@@ -62,13 +62,5 @@ export const teamData = [
       "Experienced product lead with a passion for solving challenges and crafting intuitive digital experiences. Has led and driven growth in finance, investment, Al, and real estate with Sankore, Wealth.ng, Cavisa Designs, Purple Shelves, Kada, and Juno.",
     image:
       "https://res.cloudinary.com/drykej1am/image/upload/v1741783909/weeshr-funding/Rectangle_3854_3_azvxlx.png",
-  },
-  {
-    name: "Christian Sisson",
-    title: "Advisor",
-    content:
-      "Christian Sisson is a 3x entrepreneur and founder of A*C: Antidote to Chaos. He has a strong career journey, building and scaling businesses while working with top brands and industries to drive innovation and growth.",
-    image:
-      "https://res.cloudinary.com/drykej1am/image/upload/v1741783888/weeshr-funding/Rectangle_3854_laquhv.png",
-  },
+  }
 ];
