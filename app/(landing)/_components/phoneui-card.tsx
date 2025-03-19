@@ -6,20 +6,22 @@ import { motion } from "framer-motion";
 
 const PhoneUI = () => {
   const getRandomAnimation = () => {
-    // Use smaller y-values for subtle movement
-    const variant = Math.random() > 0.5 ? { y: [0, -5, 0] } : { y: [0, 5, 0] };
-
+    // Randomly choose whether to float up or down
+    const variant = Math.random() > 0.5 ? { y: [0, -10, 0] } : { y: [0, 10, 0] };
+  
     return {
       animate: variant,
       transition: {
-        duration: 4, // Shorter duration for smoother animation
-        repeat: Infinity, // Loop the animation
-        ease: "easeInOut", // Smooth easing function
-        delay: Math.random() * 0.5, // Random delay up to 0.5 seconds
-        repeatType: "mirror", // Smoothly reverse the animation
+        duration: 3, // Smooth movement over 3 seconds
+        repeat: Infinity, // Infinite loop
+        ease: "easeInOut", // Smooth transition
+        delay: Math.random() * 0.5, // Add slight randomness
+        // eslint-disable-next-line @typescript-eslint/prefer-as-const
+        repeatType: "mirror" as "mirror", // Explicitly type the repeatType
       },
     };
   };
+  
 
   return (
     <div className="flex justify-center items-center w-full px-4 rounded-lg">
@@ -33,7 +35,7 @@ const PhoneUI = () => {
         />
         {/* Weeshr text */}
         <div
-          className="text-white absolute top-0 left-1/2 lg:left-16 transform -translate-x-1/2 lg:-translate-x-0 z-30 lg:text-6xl xl:text-[200px] text-[50px] lg:text-[150px] font-bold p-4 pt-10"
+          className="text-white absolute top-0 left-1/2 lg:left-16 transform -translate-x-1/2 lg:-translate-x-0 z-30 lg:text-6xl xl:text-[200px] text-[50px] lg:text-[150px] font-bold p-4 pt-10 animate-hoverFloat"
           style={{ textShadow: "0 0 10px #3b82f6, 0 0 20px #3b82f6" }}
         >
           Weeshr
@@ -97,17 +99,22 @@ const PhoneUI = () => {
                 img: "https://res.cloudinary.com/drykej1am/image/upload/v1741754205/weeshr-funding/chat-text-dynamic-premium_ugsott.png",
                 text: "Send Compliments",
               },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`absolute hover:p-4 flex items-center justify-center gap-4 p-3 rounded-full bg-white shadow-md ${item.className}`}
-                animate={getRandomAnimation().animate}
-              // transition={getRandomAnimation().transition}
-              >
-                <Image src={item.img} alt="" width={20} height={20} />
-                <p>{item.text}</p>
-              </motion.div>
-            ))}
+            ].map((item, index) => { 
+              // const animation = getRandomAnimation();
+              const { animate, transition } = getRandomAnimation(); 
+              return (
+                <motion.div
+                  key={index}
+                  className={`absolute hover:p-4 flex items-center justify-center gap-4 p-3 rounded-full bg-white shadow-md ${item.className}`}
+                  animate={animate} // Use precomputed animation
+                  transition={transition} // Include transition properties
+                >
+                  <Image src={item.img} alt="" width={20} height={20} />
+                  <p>{item.text}</p>
+                </motion.div>
+              )
+            }
+            )}
           </div>
         </div>
       </div>
