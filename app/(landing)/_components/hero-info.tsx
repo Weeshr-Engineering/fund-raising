@@ -31,7 +31,7 @@ export const HeroInfo = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden"
               >
-                <YouTubeThumbnail url="https://youtu.be/pjPziqbHExY" fallbackImage="https://weeshr.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdrykej1am%2Fimage%2Fupload%2Fv1704590604%2Fj7aiv2jdwuksre2bpclu.png&w=96&q=75" />
+                <YouTubeThumbnail url="https://youtu.be/333i_92Z0cA" fallbackImage="https://weeshr.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdrykej1am%2Fimage%2Fupload%2Fv1704590604%2Fj7aiv2jdwuksre2bpclu.png&w=96&q=75" />
               </motion.div>
             </div>
 
