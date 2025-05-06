@@ -1,6 +1,9 @@
 import * as motion from "motion/react-client";
 
-export const ProgressBar = ({ amountRaised = "$7,400", percentage = 4.3 }) => {
+export const ProgressBar = ({
+  amountRaised = "$10,000",
+  percentage = 6.67,
+}) => {
   return (
     <motion.div
       className="  space-y-4  mt-[500px] md:mt-[400px] px-4 lg:px-14 lg:mt-0"
